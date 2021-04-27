@@ -1,3 +1,20 @@
+@import './resets';
+@import './variables';
+
 body {
-  background: blue;
+  background: $primary-color;
+  color: $text-color;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+
+  #{&}__paragraph {     /* main__paragraph = &__paragraph, o & é o pai */
+    font-weight: map-get($font-weights, medium);
+
+    &:hover {
+      color: pink;
+    }
+  }
 }
